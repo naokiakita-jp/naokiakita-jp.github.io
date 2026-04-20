@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HabiDone サポート</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f6f4ef;
+      --card: #fffdf8;
+      --text: #1f1c17;
+      --muted: #6a6258;
+      --line: #ddd5c8;
+      --accent: #2c7a7b;
+      --accent-soft: #fffaf2;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: linear-gradient(180deg, #f3efe7 0%, var(--bg) 100%);
+      color: var(--text);
+      font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
+      line-height: 1.8;
+    }
+
+    main {
+      width: min(920px, calc(100% - 32px));
+      margin: 32px auto 56px;
+      padding: 28px 24px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      box-shadow: 0 20px 50px rgba(31, 28, 23, 0.08);
+    }
+
+    h1, h2, h3 {
+      line-height: 1.35;
+      margin: 0 0 12px;
+    }
+
+    h1 {
+      font-size: clamp(28px, 4vw, 40px);
+      letter-spacing: 0.01em;
+    }
+
+    h2 {
+      margin-top: 32px;
+      font-size: 22px;
+      border-top: 1px solid var(--line);
+      padding-top: 20px;
+    }
+
+    h3 {
+      margin-top: 22px;
+      font-size: 18px;
+    }
+
+    p, li {
+      font-size: 16px;
+    }
+
+    .lead {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .note {
+      margin: 18px 0 0;
+      padding: 14px 16px;
+      background: var(--accent-soft);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+    }
+
+    .cards {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .card {
+      padding: 16px 18px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: #fffaf2;
+    }
+
+    .card strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    ul {
+      margin: 10px 0 0;
+      padding-left: 1.2em;
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      background: rgba(31, 28, 23, 0.06);
+      border-radius: 6px;
+      padding: 0.08em 0.36em;
+    }
+
+    a {
+      color: var(--accent);
+    }
+
+    footer {
+      margin-top: 32px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>HabiDone サポート</h1>
+    <p class="lead">
+      HabiDone は、習慣・タスク・控えたい行動・日記を 1 つの一覧で管理できるアプリです。
+      このページでは、基本的な使い方や設定、プレミアム機能、バックアップについて案内します。
+    </p>
+    <p><a href="../../privacy/ja/index.html">プライバシーポリシーを見る</a></p>
+
+    <div class="cards">
+      <div class="card">
+        <strong>アプリでできること</strong>
+        習慣、タスク、制限項目、日記を 1 つの一覧で管理し、その場で記録や確認ができます。
+      </div>
+      <div class="card">
+        <strong>このページで分かること</strong>
+        項目の追加、進捗入力、日付移動、履歴確認、設定、プレミアム機能、バックアップの使い方を確認できます。
+      </div>
+    </div>
+
+    <h2>1. 基本構成</h2>
+    <p>HabiDone では、次の 4 種類の項目を扱います。</p>
+    <ul>
+      <li><strong>習慣項目</strong>: 続けたい習慣</li>
+      <li><strong>タスク項目</strong>: 期限や目標量を持つ項目</li>
+      <li><strong>制限項目</strong>: 控えたい行動や上限を決めたい項目</li>
+      <li><strong>日記項目</strong>: その日の出来事やメモ</li>
+    </ul>
+    <p class="note">すべての項目は一覧画面に集約され、日々の記録も同じ画面から行えます。</p>
+
+    <h2>2. はじめ方</h2>
+    <h3>項目を追加する</h3>
+    <p>一覧画面の右上にある <code>＋</code> ボタンから、新しい習慣・タスク・制限・日記を追加できます。</p>
+
+    <h3>進捗を記録する</h3>
+    <p>各項目の数値ボタンから、その日の進捗を入力できます。</p>
+    <ul>
+      <li>タップ: 進捗を加算</li>
+      <li>長押し: 数値を直接入力</li>
+    </ul>
+    <p>日記は本文の記録、習慣やタスクは進捗量、制限項目はその日の利用量や回数の記録に使います。</p>
+
+    <h3>今日以外の日付を見る</h3>
+    <p>一覧上部の日付表示と左右ボタンから、過去の日付や今後の日付に移動できます。</p>
+    <ul>
+      <li>過去の日付: 過去の記録を見直したり追加入力できます</li>
+      <li>先の日付: 今後表示される項目や期限前の状態を確認できます</li>
+    </ul>
+    <p>リストを上方向へスクロールすると、いつでも今日の日付へ戻れます。</p>
+
+    <h2>3. 一覧画面の見方</h2>
+    <h3>ガイド表示</h3>
+    <p>各項目には、期限や残り状況、進捗、必要ペースなどのガイドが表示されます。ガイドは設定で切り替えられます。</p>
+    <ul>
+      <li>残り日数 + ペース</li>
+      <li>残り日数 + 回数</li>
+      <li>残り日数 + 進捗</li>
+      <li>期限 + ペース</li>
+      <li>期限 + 回数</li>
+      <li>期限 + 進捗</li>
+      <li>非表示</li>
+    </ul>
+
+    <h3>進捗状態</h3>
+    <p>項目には、進行中、準備中、優先対応、実行しない、超過などの状態が表示されることがあります。状態は項目の種類や設定に応じて自動判定されます。</p>
+
+    <h3>その場で編集する</h3>
+    <p>各項目の <code>…</code> ボタンから、項目の編集、月次サマリー、履歴確認ができます。日記ではすべての日記一覧を開けます。</p>
+
+    <h2>4. 項目設定の考え方</h2>
+    <h3>スケジュール設定</h3>
+    <p>開始日、終了日、繰り返し単位、曜日、日付、月、前回完了からの間隔などを組み合わせて設定できます。</p>
+
+    <h3>期日まわりの表示</h3>
+    <p>タスクでは、期日前から一覧に表示する日数を設定できます。</p>
+    <ul>
+      <li><strong>事前表示日数</strong>: 期日前から表示する日数</li>
+    </ul>
+    <p>習慣項目の一部設定では、<strong>期日前有効日数</strong> として、期日前に有効化する日数を設定できます。</p>
+
+    <h3>シークレット設定</h3>
+    <p>シークレットを ON にした項目は、プレミアム機能とパスコード設定を使うことでタイトルや日記本文を伏せ字表示にできます。</p>
+
+    <h3>カラータグ</h3>
+    <p>カラータグを付けると、一覧や履歴で分類しやすくなります。日記ではタグ名をタイトルへ反映することもできます。</p>
+
+    <h2>5. 履歴と振り返り</h2>
+    <h3>履歴表示</h3>
+    <p>習慣・タスク・制限項目は日別の履歴を確認できます。日記は <strong>すべての日記</strong> として一覧で確認できます。</p>
+    <p>日記の履歴では、タイトルだけでなく本文も最大 3 行まで表示されます。</p>
+
+    <h3>月次サマリー</h3>
+    <p>各項目の月次サマリーでは、状態の内訳や月ごとの傾向を確認できます。必要に応じて過去の月へ切り替えて確認できます。</p>
+
+    <h2>6. 設定でできること</h2>
+    <h3>絞り込みと並び順</h3>
+    <ul>
+      <li>表示期間のフィルタ</li>
+      <li>優先度による絞り込み</li>
+      <li>並び順の変更</li>
+      <li>項目種別の表示順変更</li>
+    </ul>
+
+    <h3>通知</h3>
+    <p>通知は 2 種類あります。</p>
+    <ul>
+      <li><strong>チェックイン通知</strong>: 1日の終わりに記録を促す通知</li>
+      <li><strong>プラン通知</strong>: 1日の始まりに予定を確認する通知</li>
+    </ul>
+    <p>通知はシステム設定で無効化されている場合、設定画面から通知設定を開けます。</p>
+
+    <h3>1日の切り替わり</h3>
+    <p><strong>1日の開始時刻</strong> を使うと、アプリ上の 1 日の切り替わり時刻を調整できます。深夜に活動する人でも、自分の生活リズムに合わせて 1 日の区切りを変えられます。</p>
+
+    <h3>見た目</h3>
+    <p>見た目設定では、次のような項目を調整できます。</p>
+    <ul>
+      <li>表示モード: システム設定 / ライト / ダーク</li>
+      <li>レイアウト: アクセント / カード</li>
+      <li>ガイド: 一覧ガイドの表示形式</li>
+      <li>色設定: 色プリセットやカスタムカラー</li>
+      <li>色の濃さ: セクションカラーの強さ</li>
+    </ul>
+
+    <h3>このアプリについて</h3>
+    <ul>
+      <li>プライバシーポリシーを開く</li>
+      <li>ウェルカムガイドを再確認する</li>
+      <li>プレミアム機能を再確認する</li>
+      <li>サンプルデータを追加・削除する</li>
+    </ul>
+
+    <h3>バックアップ</h3>
+    <p>プレミアム機能では、バックアップの作成と復元が使えます。バックアップには項目、記録、タグなどが含まれます。</p>
+
+    <h2>7. プレミアム機能</h2>
+    <p>プレミアムでは、次の機能を利用できます。</p>
+    <ul>
+      <li>広告の非表示</li>
+      <li>カスタムカラーの設定と保存</li>
+      <li>シークレット項目の伏せ字表示</li>
+      <li>バックアップ作成と復元</li>
+    </ul>
+    <p>設定画面の「プレミアム機能を再確認」から内容確認、購入、復元ができます。</p>
+
+    <h2>8. よくある使い方</h2>
+    <h3>毎日続けたいことを管理したい</h3>
+    <p><strong>習慣項目</strong> を追加し、毎日または毎週の設定を行ってください。数値ボタンからすぐに進捗を加算できます。</p>
+
+    <h3>締切付きの作業を管理したい</h3>
+    <p><strong>タスク項目</strong> を追加し、終了日を設定してください。必要に応じて事前表示日数を使うと、表示タイミングを調整できます。</p>
+
+    <h3>やりすぎを防ぎたい</h3>
+    <p><strong>制限項目</strong> を使うと、一定期間内の回数や量の上限を管理できます。</p>
+
+    <h3>日記やメモを残したい</h3>
+    <p><strong>日記項目</strong> を追加すると、その日の出来事やメモを残せます。履歴からすべての日記を見返せます。</p>
+
+    <h2>9. 設定例</h2>
+    <h3>習慣</h3>
+    <p><strong>「朝のストレッチを毎日の習慣にしたい」</strong></p>
+    <ul>
+      <li>項目種別: <strong>習慣</strong></li>
+      <li>タイトル例: 朝のストレッチ</li>
+      <li>基準: <strong>固定期間</strong></li>
+      <li>繰り返し: <strong>日次</strong></li>
+      <li>目標量: <strong>1</strong></li>
+      <li>使い方: できた日に数値ボタンをタップして記録する</li>
+    </ul>
+
+    <p><strong>「3日ごとのジョギングを続けたい」</strong></p>
+    <ul>
+      <li>項目種別: <strong>習慣</strong></li>
+      <li>タイトル例: ジョギング</li>
+      <li>基準: <strong>前回基準</strong></li>
+      <li>繰り返し: <strong>日次</strong></li>
+      <li>間隔: <strong>3</strong></li>
+      <li>目標量: <strong>1</strong></li>
+      <li>使い方: 実施した日に記録すると、次回の目安日が自動でずれる</li>
+    </ul>
+
+    <p><strong>「隔週の資源ごみ回収を忘れたくない」</strong></p>
+    <ul>
+      <li>項目種別: <strong>習慣</strong></li>
+      <li>タイトル例: 資源ごみ</li>
+      <li>基準: <strong>固定期間</strong></li>
+      <li>繰り返し: <strong>月毎</strong></li>
+      <li>曜日指定: <strong>月曜</strong></li>
+      <li>週指定: <strong>第1・第3</strong></li>
+      <li><strong>期日のみ有効</strong>: ON</li>
+      <li>目標量: <strong>1</strong></li>
+      <li>使い方: 回収日に出したら記録する</li>
+    </ul>
+
+    <h3>タスク</h3>
+    <p><strong>「締切までに原稿を終えるには、1 日あたり何ページ必要か知りたい」</strong></p>
+    <ul>
+      <li>項目種別: <strong>タスク</strong></li>
+      <li>タイトル例: 原稿</li>
+      <li>終了日: 締切日</li>
+      <li>目標量: 合計ページ数</li>
+      <li>ガイド: <strong>ペース表記</strong></li>
+      <li>使い方: その日に進んだページ数を記録すると、必要ペースを確認できる</li>
+    </ul>
+
+    <p><strong>「受診日になったら通院したい」</strong></p>
+    <ul>
+      <li>項目種別: <strong>タスク</strong></li>
+      <li>タイトル例: 通院</li>
+      <li>終了日: 締切日</li>
+      <li><strong>期日のみ有効</strong>: ON</li>
+      <li>目標量: <strong>1</strong></li>
+      <li>使い方: 受診日当日にだけ実行したい予定向け</li>
+    </ul>
+
+    <h3>制限</h3>
+    <p><strong>「お菓子は週 3 回までに抑えたい」</strong></p>
+    <ul>
+      <li>項目種別: <strong>制限</strong></li>
+      <li>タイトル例: お菓子</li>
+      <li>基準: <strong>固定期間</strong></li>
+      <li>繰り返し: <strong>週毎</strong></li>
+      <li>目標量: <strong>3</strong></li>
+      <li>単位例: 回</li>
+      <li>使い方: 食べた日に回数を記録し、週内の残り回数を確認する</li>
+    </ul>
+
+    <p><strong>「缶ジュースは前回飲んでから3日は空けたい」</strong></p>
+    <ul>
+      <li>項目種別: <strong>制限</strong></li>
+      <li>タイトル例: 缶ジュース</li>
+      <li>基準: <strong>前回基準</strong></li>
+      <li>繰り返し: <strong>日次</strong></li>
+      <li>間隔: <strong>3</strong></li>
+      <li>目標量: <strong>1</strong></li>
+      <li>使い方: 飲んだ日に記録すると、次に飲んでよい目安日を確認できます</li>
+    </ul>
+
+    <h3>日記</h3>
+    <p><strong>「毎日の生活を日記として残したい」</strong></p>
+    <ul>
+      <li>項目種別: <strong>日記</strong></li>
+      <li>タイトル例: ひとことメモ / 日常メモ</li>
+      <li>本文: その日の出来事や気づきを入力</li>
+      <li>使い方: 一覧から本文を記録し、あとで「すべての日記」から見返す</li>
+    </ul>
+
+    <h2>10. サポート</h2>
+    <p>不具合報告やお問い合わせは、次の連絡先へお願いします。</p>
+    <p>
+      運営者: <strong>Naoki Akita</strong><br>
+      連絡先: <strong>naokiakita.jp@gmail.com</strong>
+    </p>
+
+    <footer>
+      HabiDone サポートページ
+    </footer>
+  </main>
+</body>
+</html>

@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HabiDone Support</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f6f4ef;
+      --card: #fffdf8;
+      --text: #1f1c17;
+      --muted: #6a6258;
+      --line: #ddd5c8;
+      --accent: #2c7a7b;
+      --accent-soft: #fffaf2;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: linear-gradient(180deg, #f3efe7 0%, var(--bg) 100%);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.75;
+    }
+
+    main {
+      width: min(920px, calc(100% - 32px));
+      margin: 32px auto 56px;
+      padding: 28px 24px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      box-shadow: 0 20px 50px rgba(31, 28, 23, 0.08);
+    }
+
+    h1, h2, h3 {
+      line-height: 1.35;
+      margin: 0 0 12px;
+    }
+
+    h1 {
+      font-size: clamp(28px, 4vw, 40px);
+      letter-spacing: 0.01em;
+    }
+
+    h2 {
+      margin-top: 32px;
+      font-size: 22px;
+      border-top: 1px solid var(--line);
+      padding-top: 20px;
+    }
+
+    h3 {
+      margin-top: 22px;
+      font-size: 18px;
+    }
+
+    p, li {
+      font-size: 16px;
+    }
+
+    .lead {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .note {
+      margin: 18px 0 0;
+      padding: 14px 16px;
+      background: var(--accent-soft);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+    }
+
+    .cards {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .card {
+      padding: 16px 18px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: #fffaf2;
+    }
+
+    .card strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    ul {
+      margin: 10px 0 0;
+      padding-left: 1.2em;
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      background: rgba(31, 28, 23, 0.06);
+      border-radius: 6px;
+      padding: 0.08em 0.36em;
+    }
+
+    a {
+      color: var(--accent);
+    }
+
+    footer {
+      margin-top: 32px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>HabiDone Support</h1>
+    <p class="lead">
+      HabiDone is an app that lets you manage habits, tasks, limit items, and diary entries from one screen.
+      This page explains the main workflow, settings, premium features, and backup options.
+    </p>
+    <p><a href="../../privacy/en/index.html">View the Privacy Policy</a></p>
+
+    <div class="cards">
+      <div class="card">
+        <strong>What HabiDone is for</strong>
+        Manage habits, tasks, behaviors you want to limit, and diary notes in a single list.
+      </div>
+      <div class="card">
+        <strong>What this page covers</strong>
+        Adding items, entering progress, moving across dates, reviewing history, changing settings, premium features, and backup.
+      </div>
+    </div>
+
+    <h2>1. Main structure</h2>
+    <p>HabiDone uses four item types.</p>
+    <ul>
+      <li><strong>Habit</strong>: things you want to keep doing</li>
+      <li><strong>Task</strong>: items with a due date or target amount</li>
+      <li><strong>Limit</strong>: actions you want to reduce or cap</li>
+      <li><strong>Diary</strong>: daily notes and records</li>
+    </ul>
+    <p class="note">All of them appear in one list so you can record and review daily activity without switching screens.</p>
+
+    <h2>2. Getting started</h2>
+    <h3>Add items</h3>
+    <p>Use the <code>+</code> button in the top right of the main list to add a new Habit, Task, Limit, or Diary entry.</p>
+
+    <h3>Enter progress</h3>
+    <p>You can enter progress directly from the list.</p>
+    <ul>
+      <li>Tap: add progress</li>
+      <li>Long-press: enter a value directly</li>
+    </ul>
+    <p>Diary items use text entries, while habits, tasks, and limits use numeric progress or counts.</p>
+
+    <h3>Move to other dates</h3>
+    <p>Use the date at the top of the list and the left/right buttons to move between past and future dates.</p>
+    <ul>
+      <li>Past dates: review or add past records</li>
+      <li>Future dates: check upcoming items and due-date visibility</li>
+    </ul>
+    <p>You can always return to today by scrolling the list upward.</p>
+
+    <h2>3. Reading the list</h2>
+    <h3>Guide display</h3>
+    <p>Each item can show guide text such as remaining days, required pace, count progress, or deadline information. The guide style can be changed in Settings.</p>
+    <ul>
+      <li>Remaining + Pace</li>
+      <li>Remaining + Count</li>
+      <li>Remaining + Progress</li>
+      <li>Deadline + Pace</li>
+      <li>Deadline + Count</li>
+      <li>Deadline + Progress</li>
+      <li>Hidden</li>
+    </ul>
+
+    <h3>Status labels</h3>
+    <p>Items may show states such as <code>Active</code>, <code>Ready</code>, <code>Must Do</code>, <code>Do Not</code>, or <code>Over</code>. These are calculated automatically from the item type, schedule, and current progress.</p>
+
+    <h3>Edit or review an item</h3>
+    <p>Use the <code>…</code> button on each item to edit it, open the monthly summary, or review history. For Diary items, you can open <strong>All Diaries</strong>.</p>
+
+    <h2>4. How item settings work</h2>
+    <h3>Schedule</h3>
+    <p>You can combine start dates, end dates, recurrence, weekdays, month dates, months, and flexible intervals based on the last completion date.</p>
+
+    <h3>Show Early</h3>
+    <p>Tasks can be shown a few days before their due dates.</p>
+    <ul>
+      <li><strong>Show Early</strong>: how many days in advance to show the item</li>
+    </ul>
+    <p>Some Habit setups use <strong>Active Before Due</strong> to define how many days before a due date the item becomes active.</p>
+
+    <h3>Secret</h3>
+    <p>When <code>Secret</code> is enabled, premium users can mask the item title and diary text with passcode protection.</p>
+
+    <h3>Color Tag</h3>
+    <p>Color tags help categorize entries. For Diary items, you can also set the title from the selected tag name.</p>
+
+    <h2>5. History and review</h2>
+    <h3>History</h3>
+    <p>Habits, tasks, and limits support daily history review. Diary entries can be opened through <strong>All Diaries</strong>.</p>
+    <p>Diary history shows not only the title but also up to three lines of body text.</p>
+
+    <h3>Monthly summary</h3>
+    <p>Monthly summaries help you review state distribution and trends for each item. You can move across months and inspect the breakdown in more detail.</p>
+
+    <h2>6. What you can change in Settings</h2>
+    <h3>Filter / Ordering</h3>
+    <ul>
+      <li>Period filter</li>
+      <li>Minimum priority filter</li>
+      <li>List ordering</li>
+      <li>Item type ordering</li>
+    </ul>
+
+    <h3>Notifications</h3>
+    <p>There are two notification types.</p>
+    <ul>
+      <li><strong>Check-in Notification</strong>: sent near the end of your day to remind you to record progress</li>
+      <li><strong>Plan Notification</strong>: sent at the start of your day to review what is due</li>
+    </ul>
+    <p>If notifications are disabled at the system level, you can open notification settings from the app.</p>
+
+    <h3>Day Boundary</h3>
+    <p><strong>Start of Day Offset</strong> lets you shift the in-app start of the day, which is useful if your daily routine crosses midnight.</p>
+
+    <h3>Theme</h3>
+    <p>The Theme screen lets you change:</p>
+    <ul>
+      <li>Appearance: System / Light / Dark</li>
+      <li>Layout: Accent / Card</li>
+      <li>Guide style on the list</li>
+      <li>Color presets and custom colors</li>
+      <li>Color intensity</li>
+    </ul>
+
+    <h3>About This App</h3>
+    <ul>
+      <li>Privacy Policy</li>
+      <li>Recheck Welcome Guide</li>
+      <li>Recheck Premium Features</li>
+      <li>Add Sample Items / Delete Sample Items</li>
+    </ul>
+
+    <h3>Backup</h3>
+    <p>Premium users can use <strong>Create Backup</strong> and <strong>Restore Backup</strong> to export or restore items, records, and tags.</p>
+
+    <h2>7. Premium features</h2>
+    <p>Premium includes:</p>
+    <ul>
+      <li>Ad-free experience</li>
+      <li>Custom colors and saved presets</li>
+      <li>Masked display for Secret items</li>
+      <li>Backup creation and restore</li>
+    </ul>
+    <p>You can review the details, purchase, or restore from <strong>Check Premium Features</strong> in Settings.</p>
+
+    <h2>8. Common usage patterns</h2>
+    <h3>Track habits</h3>
+    <p>Create a Habit and set a daily or weekly recurrence. You can then update it directly from the list.</p>
+
+    <h3>Manage deadline-based work</h3>
+    <p>Create a Task, set an end date, and use Show Early if you want the task to appear before its due date.</p>
+
+    <h3>Reduce unwanted actions</h3>
+    <p>Create a Limit item to track the maximum amount or count you want to stay under within a period.</p>
+
+    <h3>Keep notes or a daily journal</h3>
+    <p>Create a Diary item to store personal notes. You can later review them from All Diaries.</p>
+
+    <h2>9. Example setups</h2>
+    <h3>Habit</h3>
+    <p><strong>"I want to make my morning stretch a daily habit."</strong></p>
+    <ul>
+      <li>Item type: <strong>Habit</strong></li>
+      <li>Title example: Morning Stretch</li>
+      <li>Basis: <strong>Fixed</strong></li>
+      <li>Recurrence: <strong>Daily</strong></li>
+      <li>Amount: <strong>1</strong></li>
+      <li>How to use it: tap the number button on the days you complete it</li>
+    </ul>
+
+    <p><strong>"I want to keep up with jogging every 3 days."</strong></p>
+    <ul>
+      <li>Item type: <strong>Habit</strong></li>
+      <li>Title example: Jogging</li>
+      <li>Basis: <strong>Since Last</strong></li>
+      <li>Recurrence: <strong>Daily</strong></li>
+      <li>Interval: <strong>3</strong></li>
+      <li>Amount: <strong>1</strong></li>
+      <li>How to use it: record each completion and the next target timing will shift automatically</li>
+    </ul>
+
+    <p><strong>"I do not want to forget my biweekly recycling pickup."</strong></p>
+    <ul>
+      <li>Item type: <strong>Habit</strong></li>
+      <li>Title example: Recycling</li>
+      <li>Basis: <strong>Fixed</strong></li>
+      <li>Recurrence: <strong>Monthly</strong></li>
+      <li>Weekday: <strong>Monday</strong></li>
+      <li>Week positions: <strong>1st and 3rd</strong></li>
+      <li><strong>Active on due dates only</strong>: ON</li>
+      <li>Amount: <strong>1</strong></li>
+      <li>How to use it: mark it when you put it out</li>
+    </ul>
+
+    <h3>Task</h3>
+    <p><strong>"I want to know how many pages I need to write each day to meet my deadline."</strong></p>
+    <ul>
+      <li>Item type: <strong>Task</strong></li>
+      <li>Title example: Manuscript</li>
+      <li>Amount: total number of pages</li>
+      <li>End date: your deadline</li>
+      <li>Guide: pace-based guide display</li>
+      <li>How to use it: record how many pages you completed and check the required pace</li>
+    </ul>
+
+    <p><strong>"I only want to go to the clinic on the appointment date."</strong></p>
+    <ul>
+      <li>Item type: <strong>Task</strong></li>
+      <li>Title example: Clinic Visit</li>
+      <li>End date: the deadline</li>
+      <li><strong>Active on due dates only</strong>: ON</li>
+      <li>Amount: <strong>1</strong></li>
+      <li>How to use it: useful for tasks you only want to do on the due date itself</li>
+    </ul>
+
+    <h3>Limit</h3>
+    <p><strong>"I want to limit sweets to just 3 times a week."</strong></p>
+    <ul>
+      <li>Item type: <strong>Limit</strong></li>
+      <li>Title example: Sweets</li>
+      <li>Basis: <strong>Fixed</strong></li>
+      <li>Recurrence: <strong>Weekly</strong></li>
+      <li>Amount: <strong>3</strong></li>
+      <li>Unit example: times</li>
+      <li>How to use it: record each time and check how many uses remain that week</li>
+    </ul>
+
+    <p><strong>"I want to wait 3 days after my last canned soda."</strong></p>
+    <ul>
+      <li>Item type: <strong>Limit</strong></li>
+      <li>Title example: Soda</li>
+      <li>Basis: <strong>Since Last</strong></li>
+      <li>Recurrence: <strong>Daily</strong></li>
+      <li>Interval: <strong>3</strong></li>
+      <li>Amount: <strong>1</strong></li>
+      <li>How to use it: record it on the day you drink one and check when it becomes available again</li>
+    </ul>
+
+    <h3>Diary</h3>
+    <p><strong>"I want to keep a diary of my daily life."</strong></p>
+    <ul>
+      <li>Item type: <strong>Diary</strong></li>
+      <li>Title example: Daily Note</li>
+      <li>Body text: write down what happened or what you noticed</li>
+      <li>How to use it: save text from the list and review it later from All Diaries</li>
+    </ul>
+
+    <h2>10. Support</h2>
+    <p>For bug reports or support inquiries, please contact:</p>
+    <p>
+      Operator: <strong>Naoki Akita</strong><br>
+      Contact: <strong>naokiakita.jp@gmail.com</strong>
+    </p>
+
+    <footer>
+      HabiDone Support Page
+    </footer>
+  </main>
+</body>
+</html>
